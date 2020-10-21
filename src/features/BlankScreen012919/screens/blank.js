@@ -27,15 +27,17 @@ export default class Blank extends React.Component {
 
   render = () => (
     <View>
-      <CheckBox
-        title="Checkbox"
-        checked={this.state.CheckBox_3}
-        onPress={nextChecked => this.setState({ CheckBox_3: nextChecked })}
-      />
+      <TouchableOpacity
+        onPress={() => this.props.navigation.navigate("BlankScreen112921")}
+      >
+        <CheckBox
+          title="Checkbox"
+          checked={this.state.CheckBox_3}
+          onPress={nextChecked => this.setState({ CheckBox_3: nextChecked })}
+        />
+      </TouchableOpacity>
       <CheckBox
         title="Radio button"
-        checkedIcon="dot-circle-o"
-        uncheckedIcon="circle-o"
         checked={this.state.CheckBox_5}
         onPress={nextChecked => this.setState({ CheckBox_5: nextChecked })}
       />
@@ -48,6 +50,10 @@ const styles = StyleSheet.create({
     flex: 1,
     marginHorizontal: 16
   },
+
+  View_1: {},
+  CheckBox_3: {},
+  CheckBox_5: {},
   View_1: {},
   CheckBox_3: {},
   CheckBox_5: {}
